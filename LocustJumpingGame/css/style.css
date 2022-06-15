@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: steelblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gameContainer{
+    width: 1000px;
+    height: 300px;
+    background: rgba(0, 0, 0, .2);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.character{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    top: 230px;
+    -webkit-animation: character 1s infinite linear;
+    animation: character 0ssfinite linear;
+}
+.locust{
+    position: absolute;
+    font-size: 3rem;
+    color:rgb(9, 27, 9);
+    z-index: 5;
+}
+.jump{
+    -webkit-animation: locust 1100ms infinite ;
+    animation: locust 1100ms infinite ;
+}
+
+.leaf{
+    width: 100px;
+    height: 20px;
+    background: rgb(2, 92, 2);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, .3);
+}
+.character2{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    top: 230px;
+    right: 0;
+    -webkit-animation: frog 3500ms infinite linear;
+    animation: frog s5 infinite linear;
+}
+.frog{
+    font-size: 3rem;
+    color: rgb(0, 21, 0);
+    position: absolute;
+    z-index: 5;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+@keyframes character{
+    0%{top:230px}
+    50%{top: 235px;}
+    100%{top:230px}
+}
+@keyframes frog{
+    0%{right: 0px;}
+    100%{right: 1100px;}
+}
+@keyframes locust {
+    0%{top: 0px}
+    60%{top:-70px}
+    100%{top: 0px}
+}
