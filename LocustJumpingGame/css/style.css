@@ -12,6 +12,18 @@ body{
     align-items: center;
     justify-content: center;
 }
+.container{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    gap: 2rem
+}
+.header h1{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+}
 .gameContainer{
     width: 1000px;
     height: 300px;
@@ -28,8 +40,8 @@ body{
     flex-direction: column-reverse;
     align-items: center;
     top: 230px;
-    -webkit-animation: character 1s infinite linear;
-    animation: character 0ssfinite linear;
+    animation: character 1100ms infinite linear;
+    -webkit-animation: character 1100ms infinite linear;
 }
 .locust{
     position: absolute;
@@ -38,8 +50,8 @@ body{
     z-index: 5;
 }
 .jump{
-    -webkit-animation: locust 1100ms infinite ;
-    animation: locust 1100ms infinite ;
+    -webkit-animation: locust 1100ms;
+    animation: locust 1100ms;
 }
 
 .leaf{
@@ -63,8 +75,8 @@ body{
     align-items: center;
     top: 230px;
     right: 0;
-    -webkit-animation: frog 3500ms infinite linear;
-    animation: frog s5 infinite linear;
+    -webkit-animation: frog 3s infinite linear ;
+    animation: frog 3s infinite linear ;
 }
 .frog{
     font-size: 3rem;
@@ -90,4 +102,62 @@ body{
     0%{top: 0px}
     60%{top:-70px}
     100%{top: 0px}
+}
+/* Game over box */
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    z-index: -1 ;
+    display: none;
+    
+}
+.overlay.active{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameOverCard{
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+.gameOverCard h1{
+    font-size: 3rem;
+    color: rgb(60, 60, 60);
+}
+.gameOverCard button{
+    padding: 1rem 2rem;
+    background: maroon;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.gameOverCard button:hover{
+    cursor: pointer;
+    background: rgb(110, 0, 0);
 }

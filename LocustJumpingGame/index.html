@@ -6,23 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ad9a672967.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Locust Game</title>
 </head>
 <body>
-    <div class="gameContainer">
-        <div class="character">
-            <div class="locust">
-                <i class="fa-solid fa-locust"></i>
-            </div>
-            <div class="leaf"></div>
-        </div>
-        <div class="character2">
-            <div class="frog">
-                <i class="fa-solid fa-frog"></i>
-            </div>
-            <div class="leaf"></div>
+    <div class="overlay" id="overlay">
+        <div class="gameOverCard">
+            <h1>Game Over</h1>
+            <button type="button" id="refresh" onclick="window.location.reload()">
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+                Play Again
+            </button>
         </div>
     </div>
-    
+    <div class="container">
+        <div class="header">
+            <h1>Locust Jumping Game</h1>
+        </div>
+        <div class="gameContainer"> 
+            <div class="character">
+                <div class="locust" id="locust">
+                    <i class="fa-solid fa-locust"></i>
+                </div>
+                <div class="leaf"></div>
+            </div>
+            <div class="character2" id="frog">
+                <div class="frog">
+                    <i class="fa-solid fa-frog"></i>
+                </div>
+                <div class="leaf"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
 </body>
 </html>
