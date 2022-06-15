@@ -40,8 +40,8 @@ body{
     flex-direction: column-reverse;
     align-items: center;
     top: 230px;
-    animation: character 1100ms infinite linear;
     -webkit-animation: character 1100ms infinite linear;
+    animation: character 1100ms infinite linear;
 }
 .locust{
     position: absolute;
